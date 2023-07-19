@@ -57,3 +57,30 @@ const a = ref('小哈')
 ```
 
 ### 4. v-for
+其实就是forEach
+v-for 里面还可以嵌套 v-for
+需要绑定key
+```jsx
+<template>
+ <div :key="index" v-for="(item, index) in arr">
+    {{item}} - {{index}}
+ </div>
+</template>
+
+<script setup lang="ts">
+const arr:string[] = ['nba', 'cba', 'aaa']
+</script>
+
+<style scoped>
+</style>
+
+```
+![image-20230719212625029](https://gitee.com/hanosong/picgo_drawingbed/raw/master/image-20230719212625029.png)
+
+### v-once 和 v-memo
+> 只会渲染一次
+v-once 是基本数据类型
+v-memo 是一个数组, 一般用在v-for中 
+    => 空数组 == v-once 
+    => 
+
